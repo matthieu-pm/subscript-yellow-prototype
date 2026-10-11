@@ -266,81 +266,7 @@ export default function App() {
         event.currentTarget.dataset.input = "keyboard";
       }}
     >
-      <header className="desktop-header">
-        <a
-          className="wordmark"
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            go(account.signedIn ? "home" : "welcome");
-          }}
-        >
-          <span className="brand-mark">s</span>subscript
-          <span className="wordmark-dot">.</span>
-        </a>
-        <span className="prototype-label">
-          <span />
-          Interactive prototype
-        </span>
-      </header>
       <div className="stage-layout">
-        <aside className="stage-note">
-          <span className="eyebrow">LESS ADMIN. MORE LIVING.</span>
-          <h2>
-            All your subscriptions.
-            <br />
-            <em>One place.</em>
-          </h2>
-          <p>
-            See what renews next, review your costs,
-            <br />
-            and keep your subscription details up to date.
-          </p>
-          <div className="demo-guide">
-            <span className="guide-arrow">↗</span>
-            <p>
-              Try signing in, connecting accounts,
-              <br />
-              and updating Apple TV.
-              <br />
-              All changes stay in this browser.
-            </p>
-          </div>
-          <div className="flow-shortcuts" aria-label="Prototype flow shortcuts">
-            <span>EXPLORE THE PROTOTYPE</span>
-            <button
-              onClick={() => {
-                updateAccount({ signedIn: false, onboarded: false });
-                go("welcome");
-              }}
-            >
-              01 <span>Login & onboarding</span>
-              <ArrowUpRight size={16} />
-            </button>
-            <button
-              onClick={() => {
-                updateAccount({ signedIn: true, onboarded: true });
-                go("home");
-              }}
-            >
-              02 <span>Subscriptions</span>
-              <ArrowUpRight size={16} />
-            </button>
-            <button
-              onClick={() => {
-                updateAccount({ signedIn: true, onboarded: true });
-                go("profile");
-              }}
-            >
-              03 <span>Profile & settings</span>
-              <ArrowUpRight size={16} />
-            </button>
-          </div>
-          <div className="demo-note">
-            <ShieldCheck size={16} />
-            <span>Demo data. No real payments or account changes.</span>
-          </div>
-        </aside>
         <div className="phone-wrap">
           <div className={`phone ${showNav ? "has-bottom-nav" : ""}`}>
             <div className="status-bar" aria-hidden="true">
@@ -1213,21 +1139,8 @@ export default function App() {
               </button>
             </dialog>
           </div>
-          <div className="under-phone">
-            <span>SUBSCRIPT / MOBILE PROTOTYPE</span>
-            <button onClick={() => setDialog("reset")}>
-              <RotateCcw size={16} />
-              Reset demo
-            </button>
-          </div>
         </div>
       </div>
-      <footer className="desktop-footer">
-        <span>A little clarity. A lot less admin.</span>
-        <span>
-          MADE FOR EVERYDAY PEACE OF MIND <span>↗</span>
-        </span>
-      </footer>
     </div>
   );
 }
