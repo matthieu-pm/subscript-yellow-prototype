@@ -2,6 +2,10 @@
 
 A standalone mobile subscription-management prototype built with React, TypeScript, and Vite. Bold typography, yellow accents, and Hugeicons support the complete journey from sign-in to updating or recording cancellation of Apple TV.
 
+Live prototype: https://subscript-yellow-prototype.vercel.app
+
+Source: https://github.com/matthieu-pm/subscript-yellow-prototype
+
 ## Run locally
 
 ```sh
