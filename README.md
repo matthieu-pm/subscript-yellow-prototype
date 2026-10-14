@@ -8,18 +8,12 @@ Source: https://github.com/matthieu-pm/subscript-yellow-prototype
 
 ## Install and run in one command
 
-Requires Node.js 24 LTS (includes npm), Git, and the GitHub CLI (`gh`). This repository is private, so your GitHub account must have access.
-
-If you haven't signed in to the GitHub CLI yet, run this once and follow the browser sign-in prompts:
-
-```sh
-gh auth login
-```
+Requires Node.js 24 (includes npm) and Git. This repository is public; no GitHub account, sign-in, or GitHub CLI is needed.
 
 From the folder where you keep your projects, paste this command into macOS Terminal, a Linux shell, or Git Bash on Windows:
 
 ```sh
-gh repo clone matthieu-pm/subscript-yellow-prototype && cd subscript-yellow-prototype && npm ci && npm run dev
+git clone https://github.com/matthieu-pm/subscript-yellow-prototype.git && cd subscript-yellow-prototype && npm ci && npm run dev
 ```
 
 This clones the repository into `subscript-yellow-prototype`, installs the exact locked dependencies, and starts the local app. No environment variables, API keys, or backend setup are needed.
