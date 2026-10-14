@@ -6,9 +6,37 @@ Live prototype: https://subscript-yellow-prototype.vercel.app
 
 Source: https://github.com/matthieu-pm/subscript-yellow-prototype
 
-## Run locally
+## Install and run in one command
+
+Requires Node.js 24 LTS (includes npm), Git, and the GitHub CLI (`gh`). This repository is private, so your GitHub account must have access.
+
+If you haven't signed in to the GitHub CLI yet, run this once and follow the browser sign-in prompts:
 
 ```sh
+gh auth login
+```
+
+From the folder where you keep your projects, paste this command into macOS Terminal, a Linux shell, or Git Bash on Windows:
+
+```sh
+gh repo clone matthieu-pm/subscript-yellow-prototype && cd subscript-yellow-prototype && npm ci && npm run dev
+```
+
+This clones the repository into `subscript-yellow-prototype`, installs the exact locked dependencies, and starts the local app. No environment variables, API keys, or backend setup are needed.
+
+Open the **Local** URL printed in the terminal, usually **http://localhost:5173**. If that port is busy, Vite prints the next available port. Keep the terminal running while using the prototype; press **Ctrl+C** to stop it.
+
+The clone command will stop if a non-empty `subscript-yellow-prototype` folder already exists. It won't overwrite your files. To restart an existing installation instead:
+
+```sh
+cd subscript-yellow-prototype
+npm run dev
+```
+
+To download updates, first save or commit any local edits, then run these commands inside the repository:
+
+```sh
+git pull --ff-only
 npm ci
 npm run dev
 ```
